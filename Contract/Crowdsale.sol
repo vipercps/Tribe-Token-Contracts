@@ -108,7 +108,7 @@ contract Crowdsale is Pause, Puller {
 
 	// Bonus function for the first week
 	function bonus(uint amount) internal constant returns (uint) {
-		if (now < startTime.add(2 minutes)) return amount.add(amount.div(5));   // bonus 20%
+		if (now < startTime.add(7 days)) return amount.add(amount.div(5));   // bonus 20%
 		return amount;
 	}
 
